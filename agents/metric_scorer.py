@@ -153,7 +153,7 @@ def _diagnose_segment_coverage(plan: AnalysisPlan, state: TrendState) -> List[Di
         diagnostics.append(
             {
                 "metric": "segment_coverage",
-                "issue": f"세그먼트 '{name}'에서 신뢰도 높은 증거가 확보되지 않음",
+                "issue": f"세그먼트 '{name}'에서 근거 신뢰 지수 높은 증거가 확보되지 않음",
                 "severity": "high",
                 "cause": "coverage-gap",
                 "target": "InfoCollector",
@@ -180,7 +180,7 @@ def _diagnose_confidence(plan: AnalysisPlan, state: TrendState) -> List[Diagnost
             diagnostics.append(
                 {
                     "metric": "evidence_confidence",
-                    "issue": f"'{name}' 평균 신뢰도 {avg_confidence:.2f}",
+                    "issue": f"'{name}' 평균 근거 신뢰 지수 {avg_confidence:.2f}",
                     "severity": "medium",
                     "cause": "low-confidence",
                     "target": "InfoCollector",

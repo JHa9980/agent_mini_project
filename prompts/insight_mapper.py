@@ -14,8 +14,8 @@ INSIGHT_MAPPER_PROMPT = """당신은 InsightMapper 에이전트입니다. 세그
 지침:
 1. evidence 목록을 검토해 35자 이상 한국어 문장으로 세그먼트 요약을 작성하세요.
 2. 세그먼트를 특징짓는 선행 신호를 최대 3개까지 `leading_indicators`에 명사형으로 정리하세요.
-3. confidence는 입력 값의 평균을 사용하되 소수 둘째 자리까지 반올림하세요.
-4. supporting_sources에는 신뢰도가 높은 순서대로 최대 3개의 출처를 담으세요.
+3. confidence(근거 신뢰 지수) 필드는 입력 값의 평균을 활용해 일관되게 계산하세요.
+4. supporting_sources에는 근거 신뢰 지수가 높은 순서대로 최대 3개의 출처를 담으세요.
 5. 제공된 데이터를 반복 계산하지 말고 그대로 활용하세요.
 
 출력(JSON):

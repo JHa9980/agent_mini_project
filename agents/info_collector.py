@@ -4,9 +4,67 @@ from __future__ import annotations
 
 from copy import deepcopy
 from typing import Dict, List, Tuple
+from datetime import datetime, timedelta
 
 from config import get_tavily_tool
 from state import EvidenceItem, FeedbackAction, TrendState
+
+
+def _calculate_confidence(source_url: str, published_date_str: str, is_cross_checked: bool = False) -> float:
+    """
+    규칙 기반으로 근거 신뢰 지수(0~1) 값을 계산합니다.
+    - 출처 유형, 최신성, 교차 검증 여부를 기반으로 점수를 조정합니다.
+    """
+    score = 0.5  # Default for unknown
+    if not source_url:
+        return 0.1 # 출처가 없으면 매우 낮은 점수
+        
+    source_lower = source_url.lower()
+
+    # 1. 출처 유형 기반 기본 점수
+    if any(domain in source_lower for domain in ["arxiv.org", "acm.org", "ieee.org"]):
+        score = 0.85
+    elif any(domain in source_lower for domain in ["reuters.com", "bloomberg.com", "wsj.com", "apnews.com"]):
+        score = 0.8
+    elif any(domain in source_lower for domain in [".gov", ".org", ".edu"]):
+        score = 0.75
+    elif any(ext in source_lower for ext in [".pdf", "report"]):
+        score = 0.7
+    elif any(domain in source_lower for domain in ["forbes.com", "techcrunch.com", "wired.com"]):
+        score = 0.65
+    elif "blog" in source_lower or "news" in source_lower:
+        score = 0.6
+    elif any(domain in source_lower for domain in ["forum", "community", "reddit.com"]):
+        score = 0.3
+
+    # 2. 최신성 가/감점
+    if published_date_str:
+        try:
+            # YYYY-MM-DD 형식 또는 YYYY-MM-DDTHH:MM:SSZ 형식 처리
+            if 'T' in published_date_str:
+                date_part = published_date_str.split('T')[0]
+                published_date = datetime.strptime(date_part, "%Y-%m-%d")
+            else:
+                published_date = datetime.strptime(published_date_str, "%Y-%m-%d")
+            
+            today = datetime.now()
+            if published_date > today - timedelta(days=90):  # 3개월 이내
+                score += 0.05
+            elif published_date < today - timedelta(days=365):  # 1년 이상
+                score -= 0.1
+        except (ValueError, TypeError):
+            # 날짜 정보 형식이 맞지 않으면 감점
+            score -= 0.05
+    else:
+        # 날짜 정보가 없으면 감점
+        score -= 0.1
+
+    # 3. 교차 검증 가점 (현재 구현에서는 기본값 False 사용)
+    if is_cross_checked:
+        score += 0.1
+
+    # 점수는 0.0과 1.0 사이로 제한
+    return round(max(0.0, min(score, 1.0)), 2)
 
 
 def info_collector_node(state: TrendState) -> TrendState:
@@ -113,15 +171,16 @@ def _fetch_segment_evidence(
                 processed_urls.add(url)
 
             summary = item.get("snippet") or item.get("content") or ""
-            signals, conf_adj = _estimate_signals(summary)
+            signals, _ = _estimate_signals(summary)
+            published_date = item.get("published_date") or ""
+            confidence = _calculate_confidence(url, published_date)
+
             evidence.append(
                 {
                     "segment": segment_name,
                     "source": item.get("source") or item.get("url") or "Unknown",
-                    "published_date": item.get("published_date") or "",
-                    "confidence": min(
-                        0.95, (item.get("score") or 0.6) + confidence_boost + conf_adj
-                    ),
+                    "published_date": published_date,
+                    "confidence": confidence,
                     "summary": summary or f"{segment_name} 관련 Tavily 검색 결과 요약",
                     "signals": signals,
                     "metadata": {

@@ -14,7 +14,7 @@ INFO_COLLECTOR_PROMPT = """당신은 InfoCollector 에이전트입니다. 지정
 - segment (문자열)
 - source (URL 또는 출처명)
 - published_date (ISO-8601 날짜, 없으면 빈 문자열)
-- confidence (0~1 사이 실수)
+- confidence (0~1 사이 실수, 근거 신뢰 지수)
 - summary (핵심 요약 2~3문장)
 - signals: {papers, patents, investments, search_index, deployments, latency}
 - metadata: 검색 질의, 랭크 등 부가 정보
@@ -23,6 +23,6 @@ INFO_COLLECTOR_PROMPT = """당신은 InfoCollector 에이전트입니다. 지정
 1. keywords와 hints를 조합해 Tavily 검색 질의를 구성하고, time_window에 맞는 최신 자료를 우선 수집하세요.
 2. 결과가 부족하면 sources 목록을 참고해 키워드를 확장하세요.
 3. signals 값은 요약 내용에 나타나는 키워드에 따라 papers/patents/investments/search_index/deployments/latency를 조정하세요.
-4. confidence 값은 Tavily 점수, 출처 신뢰도, 신호 강도를 근거로 산정하되 0.95를 초과하지 마세요.
+4. confidence(근거 신뢰 지수) 값은 Tavily 점수, 출처 신뢰성, 신호 강도를 근거로 산정하되 0.95를 초과하지 마세요.
 5. 충분한 결과를 얻지 못한 경우에도 최소 한 개의 폴백 레코드를 반환하세요.
 """

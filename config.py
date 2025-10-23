@@ -7,6 +7,10 @@ from functools import lru_cache
 from typing import Any, Dict
 
 from dotenv import load_dotenv
+
+_DOTENV_PATH = os.path.join(os.path.dirname(__file__), ".env")
+load_dotenv(dotenv_path=_DOTENV_PATH, override=False)
+
 from langchain_openai import ChatOpenAI
 
 try:
@@ -17,8 +21,6 @@ except ImportError:  # pragma: no cover
 
 @lru_cache(maxsize=1)
 def get_settings() -> Dict[str, Any]:
-    load_dotenv()
-    
     # LangSmith 환경 변수 디버깅
     print("--- LangSmith 변수 확인 ---")
     print(f"LANGCHAIN_TRACING_V2: {os.environ.get('LANGCHAIN_TRACING_V2')}")
