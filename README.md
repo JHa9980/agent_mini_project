@@ -72,7 +72,6 @@ python app.py
 ### 6. 결과 확인
 실행이 완료되면 `outputs` 디렉토리에서 결과를 확인할 수 있습니다.
 - **보고서**: `outputs/edge_ai_trend_report_YYYYMMDD_HHMMSS.pdf` (또는 `.txt`)
-- **그래프 시각화**: `python graph.py`를 실행하면 `outputs/edge_ai_graph.png`가 생성됩니다.
 
 ## Agents / Nodes
 
