@@ -1,7 +1,5 @@
 """ReportAssembler 에이전트 프롬프트 (섹션별 생성 버전)."""
 
-# flake8: noqa
-
 SINGLE_SECTION_PROMPT = """당신은 특정 섹션만 전문적으로 작성하는 ReportSectionWriter 에이전트입니다.
 최종 독자는 기업의 실무자 및 의사결정자입니다. 전문적이고 비즈니스적인 톤으로, 주어진 섹션의 목적에 맞춰 깊이 있게 작성하세요.
 
