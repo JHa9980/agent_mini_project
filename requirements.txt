@@ -1,0 +1,7 @@
+langchain
+langgraph
+langchain-openai
+tavily-python
+python-dotenv
+fpdf
+langchain_teddynote

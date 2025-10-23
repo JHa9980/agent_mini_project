@@ -1,0 +1,26 @@
+graph TD
+    subgraph "분석 파이프라인"
+        direction LR
+        A(Start) --> InfoCollector[정보 수집<br>(InfoCollector)];
+        InfoCollector --> InsightMapper[인사이트 도출<br>(InsightMapper)];
+        InsightMapper --> MetricScorer[지표 계산<br>(MetricScorer)];
+        MetricScorer --> RouteMetrics{피드백 필요?};
+        RouteMetrics -- Yes --> FeedbackHandler[피드백 처리<br>(FeedbackHandler)];
+        FeedbackHandler --> InsightMapper;
+        RouteMetrics -- No --> ScenarioPlanner[시나리오 생성<br>(ScenarioPlanner)];
+    end
+
+    subgraph "보고서 생성 파이프라인"
+        direction LR
+        ScenarioPlanner --> ReportPlanner[보고서 계획<br>(ReportPlanner)];
+        ReportPlanner --> GenerateSection[섹션 생성<br>(GenerateSection)];
+        GenerateSection --> DecideContinue{추가 섹션?};
+        DecideContinue -- Yes --> SetNextSection[다음 섹션 설정<br>(SetNextSection)];
+        SetNextSection --> GenerateSection;
+        DecideContinue -- No --> FinalizeReport[최종 보고서 저장<br>(FinalizeReport)];
+        FinalizeReport --> B(End);
+    end
+
+    %% 스타일 정의
+    classDef agentNode fill:#D6EAF8,stroke:#5DADE2,stroke-width:2px,color:#000
+    class InfoCollector,InsightMapper,MetricScorer,FeedbackHandler,ScenarioPlanner,ReportPlanner,GenerateSection,SetNextSection,FinalizeReport agentNode;

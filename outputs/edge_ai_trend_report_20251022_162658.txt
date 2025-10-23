@@ -1,0 +1,78 @@
+[1. SUMMARY]
+
+2025-10-22 기준 Edge AI 전략 요약
+
+[2. 서론]
+
+Edge AI 기술은 데이터 처리의 효율성을 극대화하고, 실시간 의사결정을 가능하게 하여 다양한 산업 분야에서 혁신을 이끌고 있습니다. 본 보고서는 Edge AI의 주요 세그먼트와 향후 5년간의 성장 전망을 분석하고, 이를 기반으로 한 전략적 제언을 제공합니다.
+
+[3. 글로벌 현황]
+
+Edge AI 시장은 2026년부터 2030년까지 지속적인 성장을 보일 것으로 예상되며, 특히 산업 게이트웨이, 온디바이스 AI, 차량 엣지, 통신 인프라 분야에서 두드러진 성장을 기록할 것입니다. 이러한 성장은 기술 혁신과 소비자 수요 증가에 기인하며, 기업들은 이를 통해 경쟁력을 강화할 수 있는 기회를 찾을 수 있습니다.
+
+[4. 트렌드 인사이트]
+
+산업 게이트웨이는 AI 기반 예측 유지보수를 통해 공장 운영 방식을 혁신하고 있으며, 실시간 데이터 처리와 엣지 컴퓨팅을 활용하여 장비 고장을 사전에 감지하고 운영 효율성을 극대화하고 있습니다. 온디바이스 AI는 개인 정보 보호와 저전력 모바일 기기에서의 효율성을 강조하며, 차량 엣지 AI는 자율주행차의 혁신을 이끌고 있습니다. 통신 인프라는 AI 기술을 통합하여 새로운 수익원 창출과 서비스 제공을 가능하게 하고 있습니다.
+
+[5. 5년 시나리오 분석]
+
+향후 5년간 Edge AI 시장의 성장 전망은 보수, 중립, 가속 시나리오 모두에서 긍정적인 CAGR을 보이고 있습니다. 보수 시나리오는 12.3%, 중립 시나리오는 12.4%, 가속 시나리오는 12.6%의 CAGR을 기록할 것으로 예상됩니다. 각 시나리오의 차이는 외부 요인과 정책 변화에 대한 반응에서 발생하며, 이는 기업의 전략적 결정에 중요한 영향을 미칠 것입니다.
+
+[6. 리스크 및 기회]
+
+Edge AI 시장의 주요 리스크는 규제 변화와 경쟁 심화이며, 이는 성장 속도를 저해할 수 있습니다. 그러나 기존 인프라의 업그레이드와 소비자 수요의 증가 등은 기회로 작용할 것입니다. 기업들은 이러한 리스크를 관리하고 기회를 활용하기 위한 전략을 마련해야 합니다.
+
+[7. 전략 제언]
+
+기업들은 Edge AI 기술의 발전을 주의 깊게 살펴보고, 시장의 변화에 신속하게 대응할 수 있는 유연한 전략을 수립해야 합니다. 또한, 기술 혁신과 소비자 요구에 맞춘 제품 개발 및 서비스 제공이 필요합니다.
+
+[8. REFERENCE]
+
+- https://arxiv.org/abs/2407.05858
+- https://arxiv.org/html/2504.03708v1
+- https://corvalent.com/news/use-cases-for-industrial-gateways-in-smart-factories/
+- https://electrification.us.abb.com/products/energy-management-systems/abb-ability-edge-industrial-gateway
+- https://medium.com/@sahin.samia/on-device-ai-what-it-is-and-how-it-works-89721ee68792
+- https://premioinc.com/blogs/blog/predictive-maintenance-enabled-with-edge-ai-computing-industrial-computers
+- https://semiconductor.samsung.com/technologies/processor/on-device-ai/
+- https://www.a3logics.com/blog/edge-ai-for-autonomous-vehicles/
+- https://www.capgemini.com/insights/expert-perspectives/bringing-intelligence-to-the-telco-edge/
+- https://www.edge-ai-vision.com/2023/09/ai-and-the-road-to-full-autonomy-in-autonomous-vehicles/
+- https://www.edgeimpulse.com/blog/predictive-maintenance-at-the-edge/
+- https://www.edps.europa.eu/data-protection/technology-monitoring/techsonar/device-artificial-intelligence
+- https://www.hackster.io/news/choosing-the-best-npu-for-on-device-ai-3537876cf06a
+- https://www.lightreading.com/ai-machine-learning/intel-and-telcos-left-in-virtual-ran-limbo-by-rise-of-ai-ran
+- https://www.linkedin.com/pulse/ai-powered-predictive-maintenance-future-industrial-siemens-shitut-qz0lf
+- https://www.linkedin.com/pulse/telco-edgewash-20-ai-ran-inference-edition-dean-bubley-bgwie
+- https://www.nvidia.com/en-us/solutions/autonomous-vehicles/in-vehicle-computing/
+- https://www.researchgate.net/publication/387706168_On-Device_AI_Models_Advancing_Privacy-First_Machine_Learning_for_Mobile_Applications
+- https://www.robustel.store/blogs/industrial-iot-blog/how-to-build-a-predictive-maintenance-solution-with-an-iot-edge-gateway?srsltid=AfmBOopkLRIWez9BJnC0SgpkfqUG8JKOHm9QX41_0pfKgfMAIr9fKkAb
+- https://www.sonatus.com/blog/the-next-revolution-in-automotive-in-vehicle-edge-ai/
+- https://www.varnish-software.com/solutions/telco-edge/
+- https://www.xenonstack.com/blog/edge-ai-agents-automotive-industry
+- https://www.youtube.com/watch?v=e5h2iEz5iWE
+- https://www1.lannerinc.com/news-and-events/latest-news/edge-computers-for-autonomous-vehicles-ai-powered-computing-platforms-for-level-2-to-level-4-autonomous-driving
+
+[9. APPENDIX]
+
+정량 지표 요약:
+- 연구 활동 지수(0~20):
+  - 산업 게이트웨이(0~20): 1.52 - 낮은 연구 활동
+  - 온디바이스(0~20): 1.76 - 낮은 연구 활동
+  - 차량 엣지(0~20): 1.76 - 낮은 연구 활동
+  - 통신 인프라(0~20): 1.52 - 낮은 연구 활동
+- 시장 모멘텀 지수(0~10):
+  - 산업 게이트웨이(0~10): 5.85 - 중간 시장 반응
+  - 온디바이스(0~10): 5.85 - 중간 시장 반응
+  - 차량 엣지(0~10): 6.92 - 높은 시장 반응
+  - 통신 인프라(0~10): 6.1 - 중간 시장 반응
+- 배포 준비도 지수(0~10):
+  - 산업 게이트웨이(0~10): 4.95 - 낮은 배포 준비도
+  - 온디바이스(0~10): 5.12 - 낮은 배포 준비도
+  - 차량 엣지(0~10): 5.53 - 중간 배포 준비도
+  - 통신 인프라(0~10): 5.7 - 중간 배포 준비도
+
+진단 태그 요약:
+- 태그명: 없음
+
+이 지표들은 Edge AI 시장의 연구 활동, 시장 반응, 배포 준비도를 평가하기 위해 설계되었습니다. 각 지표는 특정 범위 내에서 점수를 부여받아 시장의 동향을 파악하는 데 도움을 줍니다. 연구 활동 지수는 연구 및 특허 활동을 반영하며, 시장 모멘텀 지수는 투자 및 검색 반응을 통합하여 시장의 현재 상태를 나타냅니다. 배포 준비도 지수는 사업화 사례와 지연 시간을 기반으로 하여 기술의 상용화 가능성을 평가합니다.
