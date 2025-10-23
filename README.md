@@ -9,7 +9,7 @@ Edge AI에 관심 있는 기업 실무자를 위해 향후 5년 트렌드를 진
 - **도구**: LangGraph, LangChain, Python 3.11, OpenAI API, Tavily Search, FPDF
 
 ## Architecture
-<img width="300" height="2100" alt="Mermaid Chart - Create complex, visual diagrams with text -2025-10-23-005834" src="https://github.com/user-attachments/assets/ed0312c7-594a-4a5e-bb35-b1255eb58d23" />
+![Uploading Mermaid Chart - Create complex, visual diagrams with text.-2025-10-23-045407.png…]()
 
 - **기본 흐름**: 사용자 계획 → 정보 수집 → 인사이트 매핑 → 정량 지표 산출 → 시나리오 작성 → **보고서 계획**
 - **순차적 보고서 생성**: 계획된 목차에 따라 각 섹션의 내용을 루프(Loop)를 돌며 순차적으로 생성합니다.
@@ -154,7 +154,7 @@ python app.py
 4. 트렌드 인사이트: 세그먼트별 신호·전조 징후 정리  
 5. 5년 시나리오 분석: 보수·중립·가속 시나리오, 촉진/저해 요인, 타임라인  
 6. 리스크 및 기회: 공급망, 네트워크, 규제 리스크와 대응 전략  
-7. 전략 제언: 투자, 파트너십, 기술 내재화 우선순위  
+7. 전략 제안: 투자, 파트너십, 기술 내재화 우선순위  
 8. 참고 자료: 사용된 외부 출처 목록  
 9. 부록: 정량 지표 표와 진단 태그 요약, 평가 로직 설명
 
