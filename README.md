@@ -97,6 +97,10 @@ python app.py
 - `scenario_outlook`: 5년 시나리오별 CAGR 값과 가정
 - `scenario_analysis`: ScenarioPlanner가 작성한 서술형 분석
 - `final_report`: 생성된 모든 섹션의 내용을 취합한 최종 보고서 본문
+- `feedback_iterations`: 피드백 루프 실행 횟수를 추적하는 카운터
+- `report_sections`: 생성해야 할 보고서 섹션 키 목록
+- `current_section`: 현재 생성 중인 섹션 이름
+- `generated_report`: 섹션별로 이미 생성된 본문 텍스트
 - `report_path` / `report_error`: 결과 파일 경로와 저장 오류 메시지
 
 ## Signal & Metrics
