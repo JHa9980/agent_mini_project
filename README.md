@@ -6,15 +6,14 @@ Edge AI에 관심 있는 기업 실무자를 위해 향후 5년 트렌드를 진
 
 - **목표**: Edge AI 세그먼트별 트렌드 신호를 수집·평가하고 5년 전략 시나리오를 제시하는 보고서를 자동 생성
 - **방법**: Tavily 웹 검색 + OpenAI GPT-4o-mini LLM + LangGraph 상태 머신을 활용한 단계별 분석
-- **도구**: LangGraph, LangChain, Python 3.11, OpenAI API, Tavily Search, FPDF, python-dotenv
+- **도구**: LangGraph, LangChain, Python 3.11, OpenAI API, Tavily Search, FPDF
 
 ## Architecture
-
+<img width="865" height="2890" alt="Mermaid Chart - Create complex, visual diagrams with text -2025-10-23-005834" src="https://github.com/user-attachments/assets/ed0312c7-594a-4a5e-bb35-b1255eb58d23" />
 - **기본 흐름**: 사용자 계획 → 정보 수집 → 인사이트 매핑 → 정량 지표 산출 → 시나리오 작성 → **보고서 계획**
 - **순차적 보고서 생성**: 계획된 목차에 따라 각 섹션의 내용을 루프(Loop)를 돌며 순차적으로 생성합니다.
 - **최종 취합**: 생성된 모든 섹션을 하나로 모아 최종 보고서 파일로 저장합니다.
 - **피드백 루프**: MetricScorer → FeedbackHandler → InfoCollector로 증거 보강을 요청하는 피드백 루프를 포함합니다.
-- **시각화**: `graph.py` 실행 시 `langchain_teddynote.graphs`를 이용해 `outputs/edge_ai_graph.png`를 생성합니다.
 
 ## Quick Start
 
@@ -139,7 +138,6 @@ agent_mini_project/
 ├── .env                    # API 키 및 환경 변수 설정
 ├── app.py                  # 전체 그래프 실행 스크립트
 ├── config.py               # 서비스 클라이언트 설정
-├── graph.py                # 그래프 시각화 유틸리티
 ├── requirements.txt        # Python 라이브러리 종속성
 ├── state.py                # LangGraph 상태 정의
 └── README.md
