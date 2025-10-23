@@ -77,7 +77,7 @@ python app.py
 
 - **정보수집 노드 (InfoCollector)**: 세그먼트·키워드·출처 계획에 따라 Tavily 검색과 요약을 수행하고 증거를 축적
 - **인사이트 노드 (InsightMapper)**: 수집된 증거를 기반으로 세그먼트별 트렌드 요약과 선행 지표를 도출
-- **지표 산출 노드 (MetricScorer)**: 연구 활동(0~20), 시장 모멘텀(0~10), 배포 준비도(0~10) 지표를 계산하고 진단 태그를 부여
+- **지표 산출 노드 (MetricScorer)**: 연구 활동(0\~20), 시장 모멘텀(0\~10), 배포 준비도(0\~10) 지표를 계산하고 진단 태그를 부여
 - **피드백 허브 (FeedbackHandler)**: 진단 태그를 해석해 InfoCollector로 증거 확장/재수집 요청을 전달
 - **시나리오 플래너 (ScenarioPlanner)**: 정량 지표를 이용해 5년 보수·중립·가속 시나리오와 내러티브를 생성
 - **보고서 계획 노드 (ReportPlanner)**: 생성할 보고서의 전체 목차를 정의하고 생성 루프를 초기화
@@ -130,7 +130,7 @@ python app.py
 
 ## Directory Structure
 
-`
+```
 agent_mini_project/
 ├── agents/                 # Agent 노드 구현
 ├── prompts/                # LLM 프롬프트 템플릿
@@ -142,4 +142,4 @@ agent_mini_project/
 ├── requirements.txt        # Python 라이브러리 종속성
 ├── state.py                # LangGraph 상태 정의
 └── README.md
-`
+```
