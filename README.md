@@ -9,7 +9,7 @@ Edge AI에 관심 있는 기업 실무자를 위해 향후 5년 트렌드를 진
 - **도구**: LangGraph, LangChain, Python 3.11, OpenAI API, Tavily Search, FPDF
 
 ## Architecture
-![Uploading Mermaid Chart - Create complex, visual diagrams with text.-2025-10-23-045407.png…]()
+<img width="280" height="2100" alt="architecture" src="https://github.com/user-attachments/assets/abc8e76c-d19e-48d2-a396-edac443eed7d" />
 
 - **기본 흐름**: 사용자 계획 → 정보 수집 → 인사이트 매핑 → 정량 지표 산출 → 시나리오 작성 → **보고서 계획**
 - **순차적 보고서 생성**: 계획된 목차에 따라 각 섹션의 내용을 루프(Loop)를 돌며 순차적으로 생성합니다.
